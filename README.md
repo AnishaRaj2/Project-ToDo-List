@@ -1,2 +1,3 @@
 # Project-ToDo-List
-Making To-Do list using React. My first React project.
+
+I made a Todo List to practice ReactJS. This is my first project using React.
