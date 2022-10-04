@@ -1,14 +1,13 @@
 import './App.css';
-import Button from './components/Button';
-import Inputtextbox from './components/Inputtextbox';
+import Addtask from './components/Addtask';
 
 function App() {
   return (
     <div className="App">
       
         <h1>To-Do List</h1>
-        <Inputtextbox />
-        <Button />
+        <Addtask />
+        
 
         
       
