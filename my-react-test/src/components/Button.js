@@ -1,5 +1,5 @@
 export default function Button () {
     return (
-        <button>Add</button>
+        <button type="submit">Add</button>
     );
 }
