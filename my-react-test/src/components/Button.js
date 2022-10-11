@@ -1,10 +1,10 @@
-export default function Button () {
+
+
+export default function Button (handleClick) {
     
-    function handleAdd() {
-        alert('Adding task to ToDo list');
-    }    
+   
     
     return (
-        <button onClick={handleAdd}>Add</button>
+        <button onClick={handleClick}>Add</button>
     );
 }
