@@ -1,10 +1,7 @@
 
-
-export default function Button (handleClick) {
-    
-   
+export default function Button (props) { 
     
     return (
-        <button onClick={handleClick}>Add</button>
+        <button onClick={props.handleClick}>Add</button>
     );
 }
