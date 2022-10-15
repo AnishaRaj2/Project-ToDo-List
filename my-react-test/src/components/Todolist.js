@@ -8,58 +8,50 @@ import TodolistTask from "./TodolistTask";
 
 export default function Todolist() {
 
-        const [statevalue, setStateValue] = useState("");        
+    const [statevalue, setStateValue] = useState("");        
     
-        useEffect(() => {
-            const text = localStorage.getItem("text");
+    useEffect(() => {
+        const text = localStorage.getItem("text");
     
             if (text!==null){
                 setStateValue(text)
             }         
             // json && setStateValue(JSON.parse(json));
-        }, []);
-    
+    },[]);
     
     // to display updated value on page title.
-        useEffect(() => {
-            document.title=statevalue
-        })
+    useEffect(() => {
+        document.title=statevalue
+    })
     
-        const handleChange = function (event){        
-            const newAddTask = event.target.value;
-            setStateValue(newAddTask);
-            try{
-                // const json = JSON.stringify(newAddTask);
-                console.log(statevalue)
-                localStorage.setItem("text", newAddTask);
-            } catch (error) {
-                console.error(
-                    "Could not save text", error);
+    const handleChange = function (event){        
+        const newAddTask = event.target.value;
+        setStateValue(newAddTask);
+        try{
+            // const json = JSON.stringify(newAddTask);
+            console.log(statevalue)
+            localStorage.setItem("text", newAddTask);
+        } catch (error) {
+                console.error("Could not save text", error);
             }        
-        };
+    };
         
-        
-
-
-
+    
     const [currentTasks, setCurrentTasks] = useState(tasks);
     const taskItems = currentTasks.map(task => <li>{task.title}</li>);
 
-
-const handleClick = (event) => {
-    const newTask={title:statevalue, id:currentTasks.length+1}
-    const newTasks=[newTask, ...currentTasks]
-    console.log(newTasks);
-    setCurrentTasks(newTasks)
- }  
+    const handleClick = (event) => {
+        const newTask={title:statevalue, id:currentTasks.length+1}
+        const newTasks=[newTask, ...currentTasks]
+        console.log(newTasks);
+        setCurrentTasks(newTasks)
+    }  
 
     return(
         <>
             <header>
                 <Addtask value={statevalue} onChange = {handleChange} />
                 <Button handleClick = {handleClick} />
-
-                
             </header>
 
             {taskItems}

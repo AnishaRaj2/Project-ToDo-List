@@ -4,6 +4,6 @@ export default function TodolistTask () {
         <form className="flex">
             <input type="text"/> 
         
-            </form> 
+        </form> 
     );
 }

@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Addtask (props) {
-    
-    
 
-    
-// to display updated value on page title.
-    
-        
-        return (
-            <>
+    return (
+        <>
             <input 
                 type="text" 
                 className="addtask"
@@ -18,9 +12,9 @@ export default function Addtask (props) {
                 value={props.value}
             /> 
             <p>{props.value}</p>            
-            </>
-        );
-    }
+        </>
+    );
+}
 
 
 
