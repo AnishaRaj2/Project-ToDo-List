@@ -38,13 +38,20 @@ export default function Todolist() {
         
     
     const [currentTasks, setCurrentTasks] = useState(tasks);
-    const taskItems = currentTasks.map(task => <li>{task.title}</li>);
+    const taskItems = currentTasks.map(task =>  <TodolistTask task={task}/> );
 
-    const handleClick = (event) => {
+    const handleClick = () => {
         const newTask={title:statevalue, id:currentTasks.length+1}
         const newTasks=[newTask, ...currentTasks]
         console.log(newTasks);
         setCurrentTasks(newTasks)
+        try{
+            // const json = JSON.stringify(newAddTask);
+            //console.log(statevalue)
+            localStorage.setItem("tasks", newTasks);
+        } catch (error) {
+                console.error("Could not save tasks", error);
+            }  
     }  
 
     return(
@@ -56,7 +63,7 @@ export default function Todolist() {
 
             {taskItems}
 
-            <TodolistTask />
+           
         </>
     );
 }

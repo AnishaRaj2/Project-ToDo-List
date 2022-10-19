@@ -10,8 +10,7 @@ export default function Addtask (props) {
                 placeholder="Add new task"
                 onChange={props.onChange}
                 value={props.value}
-            /> 
-            <p>{props.value}</p>            
+            />          
         </>
     );
 }

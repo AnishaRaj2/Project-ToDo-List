@@ -1,9 +1,9 @@
-export default function TodolistTask () {
+export default function TodolistTask (props) {
     
     return (
         <form className="flex">
-            <input type="text"/> 
-        
+          
+            <li>{props.task.title}</li>
         </form> 
     );
 }
