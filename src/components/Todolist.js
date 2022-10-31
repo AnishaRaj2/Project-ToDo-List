@@ -13,8 +13,7 @@ export default function Todolist({setTodos, todos}) {
                     todo={todo}
                     text={todo.text} 
                     key={todo.id}/>
-                ))}
-                
+                ))}                
             </ul>
         </div>
     );

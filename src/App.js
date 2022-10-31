@@ -7,6 +7,7 @@ import Todolist from './components/Todolist';
 
 
 function App() {
+
 const [inputText, setInputText] = useState("");
 const [todos, setTodos] = useState([]);
 
@@ -24,6 +25,7 @@ const saveLocalTodos = () => {
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
+// Getting data from localstorage
 const getLocalTodos = () => {
   if (localStorage.getItem("todos") === null) {
     localStorage.setItem("todos", JSON.stringify([]));
@@ -39,6 +41,7 @@ const getLocalTodos = () => {
         <h1>To-Do List</h1>
       </header>
 
+      {/* Passing setInputText, inputText, setTodosand todos as props */}
       <Form 
           setInputText={setInputText} 
           inputText={inputText} 
@@ -46,9 +49,11 @@ const getLocalTodos = () => {
           todos={todos}
       />
       
+      {/* Passing setTodos and todos as props */}
       <Todolist 
           setTodos={setTodos}
-          todos={todos}/> 
+          todos={todos}
+      /> 
            
     </div>
   );
