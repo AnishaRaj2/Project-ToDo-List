@@ -1,16 +1,3 @@
-/* .App {
-  text-align: center;
-  background-color: rgb(248, 181, 134);
-  min-height: 100vh;
-  
-} */
-
-/* .flex{
-  display: flex ;
-  list-style: none;
-  padding: 20px;
-  margin: 10px
-  } */
 
 * {
   padding: 0;
@@ -30,27 +17,28 @@ header {
 }
 
 header, form {
-  min-height: 20vh;
+  min-height: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-form input, form button {
+.todo-input,
+.todo-button {
   padding: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border: none;
   background: white;
 }
 
-form button {
+.todo-button {
   color: #6a938b;
   background: #f7fffe;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-form button:hover {
+.todo-button:hover {
   background: #6a938b;
   color: #f7fffe;
 }
@@ -62,7 +50,7 @@ form button:hover {
 }
 
 .todo-list {
-  min-width: 30%;
+  min-width: 31%;
   list-style: none;
 }
 
@@ -81,42 +69,24 @@ form button:hover {
   flex: 1;
 }
 
-.edit-button {
-  background: #a5c8e4;
-  color: white;
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
 .done-button {
-  background: #8cb596;
-  color: white;
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  font-size: 1rem;
+  background: #8cb596;  
 }
 
 .delet-button {
   background: #ff6961;
+}
+
+.done-button,
+.delet-button {
   color: white;
   border: none;
   padding: 1rem;
   cursor: pointer;
   font-size: 1rem;
-}
-
-
-
-.todo-item {
-  padding: 0rem 0.5rem;
 }
 
 .done {
   text-decoration: line-through;
   opacity: 0.5;
 }
-
-
