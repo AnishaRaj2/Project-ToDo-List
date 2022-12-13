@@ -38,7 +38,6 @@ export default function Todo({setTodos, todos, todo, text}){
                 className="delet-button">
                 <i className="fas fa-trash"/>
             </button>
-
         </div>
     );
 }
